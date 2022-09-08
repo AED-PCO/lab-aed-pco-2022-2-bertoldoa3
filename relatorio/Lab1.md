@@ -7,7 +7,7 @@ A soma de 30 com 25 é igual a 55
 O Quadrado de 55 é igual a 3025.
 Faça um programa que mostre os números de 1000 a 9999 que possuem essa característica.
 
-- Resolução: Em uma estrutura de repetição onde, depois descobri o resto da divisão dele por % e também a divisão dele por 100%
+- Resolução: Em uma estrutura de repetição onde, depois descobri o resto da divisão dele por 100 e também a divisão dele por 100
 então, ao descobrir as duas informações, desmembrei o número e fiz a soma dos dois resultados encontrados. Então, peguei a soma dos dois
 resultados e, fiz o quadrado dela. Depois, validei se o quadrado era igual ao número e se fosse, eu mostraria na tela.
 
