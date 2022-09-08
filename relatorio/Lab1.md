@@ -26,4 +26,4 @@ raciocinio utilizado; O exercicio de números primos foi resolvido da seguinte m
 pelo usuário na main. Depois de digitar esse número, validei 4 coisas antes de mostrar se era primo ou não primeiro validei se o resto da divisão
 dele por 2 ou 3 era igual a 1 e se o número era 2 ou 3. Se caisse em uma dessas 4 comparações, esse número seria primo.
 
-- ![Resultado - Lab 2 - Exe2](https://user-images.githubusercontent.com/101759772/189242006-5dfdd27a-2fb2-4d44-9f7a-c1b37f3da837.JPG)
+- Imagem da Resolução: ![Resultado - Lab 2 - Exe2](https://user-images.githubusercontent.com/101759772/189242006-5dfdd27a-2fb2-4d44-9f7a-c1b37f3da837.JPG)
