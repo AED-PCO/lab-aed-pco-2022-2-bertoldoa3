@@ -34,42 +34,41 @@ using System;
 namespace Exercicio2
 {
     internal class Program
-    {   
-        static void ValidaNumeroPrimo(int Num) {
-        int Resultado;
-        if (Num == 1 || Num==2 || Num==3 || (Num%2==1 || Num%3==1)){
+    {
+        static void ValidaNumeroPrimo(int Num)
+        {
+            int Resultado;
+            if (Num == 1 || Num == 2 || Num == 3 || (Num % 2 == 1 || Num % 3 == 1))
+            {
 
-            Resultado = Num;
-            Console.WriteLine("O número {0} é primo", Num);
-        }
-        else{
-            Console.WriteLine("O número {0} não é primo", Num);
-        }
+                Resultado = Num;
+                Console.WriteLine("O número {0} é primo", Num);
+            }
+            else
+            {
+                Console.WriteLine("O número {0} não é primo", Num);
+            }
         }
 
-       /* static void NumerosPerfeitos(){
-        int NumeroMaximo=10, NumeroMinimo=1, AcumulaDivisores=0, NumeroDivisor=0, NumeroAtual;
+        static void NumerosPerfeitos()
+        {
+            int AcumulaDivisores = 0, A, NumControle = 1000, Aux;
 
-        while (NumeroMinimo<=NumeroMaximo){
-              NumeroDivisor = NumeroMaximo - 1;
-              if (NumeroMaximo%NumeroDivisor==0){
-              AcumulaDivisores += NumeroDivisor;
-                if (NumeroMaximo==AcumulaDivisores){
-        Console.WriteLine(AcumulaDivisores);
+            for (A = 1; A < NumControle; A++)
+            {   
+                for (Aux = 1; Aux < A; Aux++)
+                {
+                    if (A % Aux == 0)
+                        AcumulaDivisores = AcumulaDivisores + Aux;
+                }
+                if (AcumulaDivisores == A)
+                {
+                    Console.WriteLine(A);
+                }
+                AcumulaDivisores = 0;
+            }
         }
-              }
-        for (NumeroAtual = NumeroMaximo; NumeroAtual >=1; NumeroAtual--){
-            NumeroMaximo = NumeroAtual;
-            NumeroDivisor = NumeroMaximo - 1;
-        if (NumeroMaximo%NumeroDivisor==0){
-              AcumulaDivisores += NumeroDivisor;
-                if (NumeroMaximo==AcumulaDivisores){
-        Console.WriteLine(AcumulaDivisores);
-        }
-              }
-        }  
-        }
-        } */
+         
         static void Main(string[] args)
         {
             int Num;
@@ -77,7 +76,7 @@ namespace Exercicio2
             Num = int.Parse(Console.ReadLine());
 
             ValidaNumeroPrimo(Num);
-           // NumerosPerfeitos();
+            NumerosPerfeitos();
 
         }
     }
