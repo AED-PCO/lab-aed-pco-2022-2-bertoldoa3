@@ -21,9 +21,9 @@ Um Número é dito Perfeito se a soma de seus divisores menores que ele é igual
 exemplo, o número 6 possui os  divisores 1, 2 e 3, cuja soma é igual a 6.
 Faça um programa que liste os números perfeitos de 1 a 1000.
 
-Resolução: O exericio de números perfeitos, não consegui resolver por isso deixei ele comentado porém com o código de acordo com meu
-raciocinio utilizado; O exercicio de números primos foi resolvido da seguinte maneira: Criei uma função que recebia um número digitado 
+Resolução: O exericio de números perfeitos, criei duas estruturas de repetição, onde uma controla até quantos números desejo saber quais são perfeitos e outra que controla quais números vou dividir por ele, essa segunda o número que será dividido está sempre a frente do outro e se o resto dessa divisão for igual a zero, armazeno o divisor dentro da variavel acumuladora, quando minha segunda estrutura de repetição estiver com o número igual ao da primeira, ele não faz mais o processo (se eu colocasse para fazer daria errado, nunca teria nenhum número perfeito) e então valida se o acumulador é igual ao número que estou verificando ou não; O exercicio de números primos foi resolvido da seguinte maneira: Criei uma função que recebia um número digitado 
 pelo usuário na main. Depois de digitar esse número, validei 4 coisas antes de mostrar se era primo ou não primeiro validei se o resto da divisão
 dele por 2 ou 3 era igual a 1 e se o número era 2 ou 3. Se caisse em uma dessas 4 comparações, esse número seria primo.
 
-Imagem da Resolução: ![Resultado - Lab 2 - Exe2](https://user-images.githubusercontent.com/101759772/189242006-5dfdd27a-2fb2-4d44-9f7a-c1b37f3da837.JPG)
+Imagem da Resolução: ![Resultado - Lab 2 - Exe2](https://user-images.githubusercontent.com/101759772/189510787-7383b667-d413-4387-b3e9-90d8def01b99.JPG)
+
