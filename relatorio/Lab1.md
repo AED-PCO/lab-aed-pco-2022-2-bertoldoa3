@@ -25,5 +25,6 @@ Resolução: O exericio de números perfeitos, criei duas estruturas de repetiç
 pelo usuário na main. Depois de digitar esse número, validei 4 coisas antes de mostrar se era primo ou não primeiro validei se o resto da divisão
 dele por 2 ou 3 era igual a 1 e se o número era 2 ou 3. Se caisse em uma dessas 4 comparações, esse número seria primo.
 
-Imagem da Resolução: ![Resultado - Lab 2 - Exe2](https://user-images.githubusercontent.com/101759772/189510787-7383b667-d413-4387-b3e9-90d8def01b99.JPG)
+Imagem da Resolução: ![Exercicio_Lista1_Exe2_AnaClaraBertoldo](https://user-images.githubusercontent.com/101759772/189510825-151fb8f9-86bd-4657-a4dd-ba12d4aea899.PNG)
+
 
