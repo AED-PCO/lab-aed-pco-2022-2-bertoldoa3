@@ -49,7 +49,6 @@ namespace Exercicio2
                 Console.WriteLine("O número {0} não é primo", Num);
             }
         }
-
         static void NumerosPerfeitos()
         {
             int AcumulaDivisores = 0, A, NumControle = 1000, Aux;
@@ -68,7 +67,6 @@ namespace Exercicio2
                 AcumulaDivisores = 0;
             }
         }
-         
         static void Main(string[] args)
         {
             int Num;
@@ -130,7 +128,8 @@ Aguardando Resolução do Exercicio;
 
 - Exercicio 5
 
-namespace Exercicio6
+using System;
+namespace Exercicio5
 {
     internal class Program
     {   
@@ -147,13 +146,13 @@ namespace Exercicio6
         static void Main(string[] args)
         {
             int Num, Resultado;
+            
             Console.WriteLine("Informe o numero que deseja saber o fatorial:");
             Num = int.Parse(Console.ReadLine());
             Resultado = CalculaFatorial(Num);
-
             Console.WriteLine("O fatorial do número {0} é {1}", Num, Resultado);
-        }
-    }
+       }
+   }
 }
 
 - Exercicio 6
