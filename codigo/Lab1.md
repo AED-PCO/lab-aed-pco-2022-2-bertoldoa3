@@ -81,3 +81,40 @@ namespace Exercicio2
         }
     }
 }
+
+- Exercicio 3 -
+
+using System;
+
+namespace Exercicio3
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+           int [] A = new int [5];
+           int [] B = new int [5];
+           int [] C = new int [5];
+           int [] D = new int [5];
+    for (int i = 0; i < 5; i++)
+  {     
+    Console.Write("Digite o Elemento {0} do Vetor A: ", i + 1);
+        A[i] = int.Parse(Console.ReadLine());
+  }
+         for (int i= 0; i < 5; i++)
+  {     
+    Console.Write("Digite o Elemento {0} do Vetor B: ", i + 1);
+        B[i] = int.Parse(Console.ReadLine());
+  }
+         for (int i= 0; i < 5; i++){
+        if (A[i]==B[i]){
+        C[i]=B[i];
+        Console.WriteLine("O número {0} está contido nos dois vetores",C[i]);
+        }
+        D[i]=B[i];
+         }
+
+  }
+    }  
+            }
+        
