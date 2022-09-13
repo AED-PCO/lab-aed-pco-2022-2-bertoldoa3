@@ -82,39 +82,109 @@ namespace Exercicio2
     }
 }
 
-- Exercicio 3 -
+- Exercicio 3
 
 using System;
 
-namespace Exercicio3
+namespace Atividade1Lista3
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-           int [] A = new int [5];
-           int [] B = new int [5];
-           int [] C = new int [5];
-           int [] D = new int [5];
-    for (int i = 0; i < 5; i++)
-  {     
-    Console.Write("Digite o Elemento {0} do Vetor A: ", i + 1);
-        A[i] = int.Parse(Console.ReadLine());
-  }
-         for (int i= 0; i < 5; i++)
-  {     
-    Console.Write("Digite o Elemento {0} do Vetor B: ", i + 1);
-        B[i] = int.Parse(Console.ReadLine());
-  }
-         for (int i= 0; i < 5; i++){
-        if (A[i]==B[i]){
-        C[i]=B[i];
-        Console.WriteLine("O número {0} está contido nos dois vetores",C[i]);
-        }
-        D[i]=B[i];
-         }
+            int [] A = new int [5];
+            int [] B = new int [5];
+            int [] C = new int [5];
+            int [] D = new int [5];
 
-  }
-    }  
-     }
-         
+            for (int i = 0; i < 5; i++){
+                Console.Write("Digite o Elemento {0} do Vetor A: ", i + 1);
+                A[i] = int.Parse(Console.ReadLine());
+            }
+            for (int i= 0; i < 5; i++){
+                Console.Write("Digite o Elemento {0} do Vetor B: ", i + 1);
+                B[i] = int.Parse(Console.ReadLine());
+            }
+            for (int i= 0; i < 5; i++){
+                if (A[i]==B[i]){
+                    C[i]=B[i];
+                    Console.WriteLine("O número {0} está contido nos dois vetores",C[i]);
+                }
+                 else{
+                    D[i]=B[i];
+                    Console.WriteLine("O número {0} não está contido nos dois vetores",D[i]);
+                 }  
+                    
+                }
+            }
+        }
+    }
+
+- Exercicio 4
+
+Aguardando Resolução do Exercicio;
+
+
+
+
+
+- Exercicio 5
+
+namespace Exercicio6
+{
+    internal class Program
+    {   
+        static int CalculaFatorial (int Num)
+        {
+            int Fatorial, I;
+            Fatorial = Num;
+            for (I=Num-1; I>=2; I--)
+            {
+                Fatorial = Fatorial * I;
+            }
+            return Fatorial;
+        }
+        static void Main(string[] args)
+        {
+            int Num, Resultado;
+            Console.WriteLine("Informe o numero que deseja saber o fatorial:");
+            Num = int.Parse(Console.ReadLine());
+            Resultado = CalculaFatorial(Num);
+
+            Console.WriteLine("O fatorial do número {0} é {1}", Num, Resultado);
+        }
+    }
+}
+
+- Exercicio 6
+
+using System;
+
+namespace Exercicio6
+{
+    internal class Program
+    {
+        static double CalculaPotencia(int X, int Y)
+        {
+        double Potencia;
+
+            Potencia = Math.Pow(X, Y);
+            return Potencia;
+        }
+
+        static void Main(string[] args)
+        {
+            int Num1, Num2;
+            double Resultado;
+            Console.WriteLine("Informe o primeiro número");
+            Num1 = int.Parse(Console.ReadLine());
+            Console.WriteLine("Informe o segundo número");
+            Num2 = int.Parse(Console.ReadLine());
+
+            Resultado = CalculaPotencia(Num1, Num2);
+            Console.WriteLine("Potencia de {0} e {1} = {2}", Num1, Num2, Resultado);
+            Console.ReadKey();
+
+        }
+    }
+}
