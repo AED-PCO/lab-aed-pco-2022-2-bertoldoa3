@@ -37,9 +37,11 @@ Depois, dentro de outro for, comparei o vetor A na posição informada com o vet
 
 Imagem da Resolução: ![Print resolução = Exercicio 3 - Ana Clara Bertoldo](https://user-images.githubusercontent.com/101759772/189797287-34cf68b6-feec-4282-99bc-aea12378b218.jpg)
 
-- Exercicio 4: AGUARDANDO RESOLUÇÃO
+- Exercicio 4: Faça um programa que receba os elementos de uma matriz de 5 linhas por 3 colunas. Mostre a soma dos elementos de cada uma das linhas e das colunas da matriz.
 
+Resolução: Criei duas funções onde uma calculava a soma das linhas e a outra a soma das colunas. Na soma das linhas o for percorre toda a linha da matriz, e soma as mesmas, passa para a proxima linha e repete o processo. Na soma das colunas o for passa por todas as colunas e soma as mesmas. Na main criei um random para preencher a matriz com números aleatórios e depois, mostro as somas.
 
+Imagem da Resolução: ![Resolucao](https://user-images.githubusercontent.com/101759772/190521921-0574a145-7488-4746-b9ce-9bf0fab800df.JPG)
 
 - Exercicio 5: Faça um programa que chame uma função capaz de calcular o Fatorial de um número inteiro.
 
