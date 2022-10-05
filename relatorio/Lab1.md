@@ -13,7 +13,7 @@ resultados e, fiz o quadrado dela. Depois, validei se o quadrado era igual ao n�
 
  Imagem da Resolução: ![Resultado - Lab 1 - Exe1](https://user-images.githubusercontent.com/101759772/189239888-a4b242f2-d3a6-4de5-b562-3629bfc50a3f.jpg)
  
- Gráfico: ![Gráficos - Laboratorio 4 - Lab1_Exercicio1](https://user-images.githubusercontent.com/101759772/194178896-ce8aa6ef-f72b-4153-bcc7-dd258200996b.PNG)
+Gráfico: ![Gráficos - Laboratorio 4 - Lab1_Exercicio1](https://user-images.githubusercontent.com/101759772/194180495-a488f50e-401b-4ec5-ab2c-b0e1597c46e0.PNG)
 
 
 - Exercicio 2 - Um Número é dito Primo se possui como divisores o número 1 e ele mesmo. Em outras 
@@ -26,6 +26,9 @@ dele por 2 ou 3 era igual a 1 e se o número era 2 ou 3. Se caisse em uma dessas
 
 Imagem da Resolução: ![Exercicio_Lista1_Exe2_AnaClaraBertoldo](https://user-images.githubusercontent.com/101759772/189510825-151fb8f9-86bd-4657-a4dd-ba12d4aea899.PNG)
 
+Gráfico: ![Gráficos - Laboratorio 4 - Lab1_Exercicio2](https://user-images.githubusercontent.com/101759772/194180920-77f2d645-439b-414d-a10d-e99596e62c1e.PNG)
+
+
 - Exercicio 3: Faça um programa que receba os elementos de dois vetores, A e B, cada um com 5 posições. 
 Considere que nenhum dos vetores possui elementos repetidos.
 Crie um vetor resultante C que possua os elementos comuns entre A e B.
@@ -36,11 +39,15 @@ Depois, dentro de outro for, comparei o vetor A na posição informada com o vet
 
 Imagem da Resolução: ![Print resolução = Exercicio 3 - Ana Clara Bertoldo](https://user-images.githubusercontent.com/101759772/189797287-34cf68b6-feec-4282-99bc-aea12378b218.jpg)
 
+Gráficos: ![Gráficos - Laboratorio 4 - Lab1_Exercicio3](https://user-images.githubusercontent.com/101759772/194181079-c51cf1de-3bbb-4bd1-a29f-862154a8f5cc.PNG)
+
 - Exercicio 4: Faça um programa que receba os elementos de uma matriz de 5 linhas por 3 colunas. Mostre a soma dos elementos de cada uma das linhas e das colunas da matriz.
 
 Resolução: Criei duas funções onde uma calculava a soma das linhas e a outra a soma das colunas. Na soma das linhas o for percorre toda a linha da matriz, e soma as mesmas, passa para a proxima linha e repete o processo. Na soma das colunas o for passa por todas as colunas e soma as mesmas. Na main criei um random para preencher a matriz com números aleatórios e depois, mostro as somas.
 
 Imagem da Resolução: ![Resolucao](https://user-images.githubusercontent.com/101759772/190521921-0574a145-7488-4746-b9ce-9bf0fab800df.JPG)
+
+Gráfico: ![Gráficos - Laboratorio 4 - Lab1_Exercicio3](https://user-images.githubusercontent.com/101759772/194181293-f7bba021-5a79-4704-abf6-c013b28d94be.PNG)
 
 - Exercicio 5: Faça um programa que chame uma função capaz de calcular o Fatorial de um número inteiro.
 
@@ -48,11 +55,14 @@ Resolução: Criei uma função que recebesse o número digitado pelo usuário n
 
 Imagem da Resolução: ![image](https://user-images.githubusercontent.com/101759772/189798003-6c3b723f-703c-4db3-ad06-3e42a2896e33.png)
 
+Gráfico: ![Gráficos - Laboratorio 4 - Lab1_Exercicio5](https://user-images.githubusercontent.com/101759772/194181461-c34377cd-5a56-4705-8027-58d2371debed.PNG)
 
 - Exercicio 6: Faça um programa que chame uma função capaz de calcular  , sendo  e  inteiros. Utilize passagem de parâmetros por referência. 
 
 Resolução: Criei uma função que recebia os dois valores recebidos na main pelo usuário, depois usando o recurso Math.Pow realizei a operação da potência que é o mesmo que um número elevado ao outro e então retornei o valor calculado. Depois, na main criei uma variavel Resultado que recebia o valor retornado pela função e mostrei ele na tela, juntamente com os números informados pelo usuário.
 
 Imagem da Resolução: ![Print resolução - - Ana Clara Bertoldo](https://user-images.githubusercontent.com/101759772/189798224-49f475dd-662d-4dea-9241-4fa1ff734549.jpg)
+
+Gráfico: ![Gráficos - Laboratorio 4 - Lab1_Exercicio6](https://user-images.githubusercontent.com/101759772/194181591-d499d8b4-d82e-44b4-8b98-cc5e4a42560f.PNG)
 
 
