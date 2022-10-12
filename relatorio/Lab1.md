@@ -64,5 +64,3 @@ Resolução: Criei uma função que recebia os dois valores recebidos na main pe
 Imagem da Resolução: ![Print resolução - - Ana Clara Bertoldo](https://user-images.githubusercontent.com/101759772/189798224-49f475dd-662d-4dea-9241-4fa1ff734549.jpg)
 
 Gráfico: ![Gráficos - Laboratorio 4 - Lab1_Exercicio6](https://user-images.githubusercontent.com/101759772/194181591-d499d8b4-d82e-44b4-8b98-cc5e4a42560f.PNG)
-
-
