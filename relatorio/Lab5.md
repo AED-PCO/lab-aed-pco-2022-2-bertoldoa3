@@ -9,19 +9,10 @@
 
 1.3 - Avaliar Sequências e Laços: 
 
-1.4 - Há variação de casos? Sim.
+- Sequências: Custo 3
+- Laços: Custo 3*N
 
-- Melhor Caso: 
-
-f(n)
-
-- Pior Caso: 
-
-f(n) = n-1
-
-- Caso Médio: 
-
-f(n) = (2n-2+n-1)/2
+1.4 - Há variação de casos? Não.
 
 
 - Exercicio 2 ![Exercicio2_AnaClaraBertoldoAnastacioPereira](https://user-images.githubusercontent.com/101759772/194435741-ccbaede8-2906-42ee-a18f-5d128c02d232.PNG)
