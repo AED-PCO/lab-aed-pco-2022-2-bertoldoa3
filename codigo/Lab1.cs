@@ -1,4 +1,4 @@
-- Exercicio 1 
+- Exercicio 1.0
 using System;
 
 namespace Exercicio1Laboratorio1
@@ -27,7 +27,7 @@ namespace Exercicio1Laboratorio1
     }
 }
 
-- Exercicio 2 
+- Exercicio 2.0
 
 using System;
 
@@ -80,7 +80,7 @@ namespace Exercicio2
     }
 }
 
-- Exercicio 3
+- Exercicio 3.0
 
 using System;
 
@@ -118,7 +118,7 @@ namespace Atividade1Lista3
         }
     }
 
-- Exercicio 4
+- Exercicio 4.0
 
 
 using System;
@@ -209,7 +209,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
 
 
 
-- Exercicio 5
+- Exercicio 5.0
 
 using System;
 namespace Exercicio5
@@ -238,7 +238,7 @@ namespace Exercicio5
    }
 }
 
-- Exercicio 6
+- Exercicio 6.0
 
 using System;
 
