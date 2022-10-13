@@ -91,3 +91,42 @@ namespace ExercicioPotenciacao
 
 Exercicio 4 - 
 	
+namespace LaboratorioFraseVogal
+{
+    internal class Program
+    {
+        static int Frase(string frase, char letra)
+        {
+            if (frase == "")
+            {
+                return (0);
+            }
+            else if (frase[0] == letra)
+            {
+                return Frase(frase.Substring(1), letra) + 1;
+            }
+            else
+                return Frase(frase.Substring(1), letra);
+        }
+        static void Main(string[] args)
+        {
+
+
+            string Frase1 = ("AED E ATP sao materias de programacao");
+            char letra;
+
+            Console.WriteLine("Letra:");
+            letra = char.Parse(Console.ReadLine());
+
+            int n = Frase(Frase1, letra);
+
+            Console.WriteLine($"Frase {Frase1} possui {n} quantidades de letras {letra}");
+        }
+    }
+}
+
+Exercicio 5 -
+	################################################## AGUARDANDO RESOLUÇÃO ################################################################
+	
+Exercicio 6 -
+	################################################## AGUARDANDO RESOLUÇÃO ################################################################
