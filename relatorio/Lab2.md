@@ -26,6 +26,8 @@ Gráfico:![Exercicio2 1_Laboratorio2](https://user-images.githubusercontent.com/
 
 - Exercicio 4 Escreva um método recursivo que receba uma frase e uma letra como parâmetros. Este método deve retornar a quantidade de ocorrências desta letra nesta frase.
 
-Resolução:
+Resolução: Iniciei o programa na Main passando uma Frase e solicitando que o usuário digite a letra que deseja analisar dentro da frase que eu passei ex: (quero saber quantas letras "A" tem na frase, então digito a letra A, depois de receber a letra digitada pelo usuário, chamei a função recursiva chamada FraseRecursiva que conta quantas letras são iguais e acumula na variável, depois retorna na tela para o usuário quantas letras "A" (ou a letra que for do usuário) possui na frase.
 
-Imagem da Resolução:
+Imagem da Resolução: ![Print_Laboratorio2_Exericio4_AnaClaraBertoldoAnastacio](https://user-images.githubusercontent.com/101759772/195470587-ff929968-f921-4bcb-97ce-a2057451ab6d.jpg)
+
+Gráfico: ![Exercicio4_Laboratorio2_AnaClaraBertoldoAnastacioPereira_Grafico](https://user-images.githubusercontent.com/101759772/195470755-f7667ffb-55ea-44e0-9c2d-b41f66c03344.jpg)
