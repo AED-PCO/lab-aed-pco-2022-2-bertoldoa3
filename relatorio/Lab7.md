@@ -46,12 +46,27 @@ c) Descreva quais as operacoes relevantes.
 
 3.3 Operacoes relevantes: Atribuicao.
 
-  
+Exercicio 4 - Um banco enfrenta problemas de consulta em seu banco de registros. Dentre os problemas identificados pela gerencia está a localizacao das contas dos seus titulares nas listagens e nos relatorios impressos em diferentes situacoes. Um especialista de TI sugeriu ordenar as contas por meio dos CPF dos seus n titulares antes das impressoes. Dentre alguns algoritmos pré seleconados para essa ordenacao o especialista escolheu o algoritmo de ordenacao por insercao. Se voce fosse o especialista, responda:
 
+a) O especialista escolheu um bom algoritmo??
 
+b) Qual algoritmo de ordenacao utilizaria?
 
+c) Descreva quais operacoes relevantes.
 
+d) Demonstre a viabilidade de sua solucao para 10 registros.
 
+4.1 Nao pois o algoritmo escolhido pelo analista compara todos os numeros ordenando de trás para a frente.
+
+4.2 MergeSort seria o algoritmo usado, uma vez que sua complexidade é Log(n). O problema é partidos em problemas pequenos facilitando a solucao deles. E, entao otimizando os processos do banco.
+
+4.3 Comparacao, atribuicao.
+
+4.4 Print da Resolucao: 
+
+Exercicio 5 - O código a seguir implementa uma funcao recursiva. Analise-o indique o que será retornado pela funcao, caso os parametros possuam os seguintes dados: V={10,5,7,15,22,9,30} e A =6.
+
+5.1 30.
 
 
 
