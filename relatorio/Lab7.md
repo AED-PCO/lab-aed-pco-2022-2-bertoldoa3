@@ -13,7 +13,8 @@
       utilizando um método to char transformaria a frase do arquivo em vetor e a frase digitada também em vetor depois que os 
       dois estivessem em vetor iria comparar as palavras que estivessem nas posições do vetor e mostraria na tela colocando as iguais e diferentes.
 
-+ 1.4 Print da Resolucao:
+     1.4 Print da Resolucao: ![Print da Resolucao - Exercicio 1 - Lab 7 - Ana Clara Bertoldo A  Pereira](https://user-images.githubusercontent.com/101759772/197848326-936313b7-7527-46dc-8d7e-d41cebdeb325.jpg)
+     - Arquivo analisado: [Arq1.txt](https://github.com/AED-PCO/lab-aed-pco-2022-2-bertoldoa3/files/9862779/Arq1.txt)
 
 ### Exercicio 2 - Dado o código a seguir, responda:
 
