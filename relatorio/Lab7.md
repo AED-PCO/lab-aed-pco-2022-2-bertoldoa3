@@ -1,10 +1,10 @@
-Exercicio 1 - Modele, projete e calcule a complexidade de um programa que:
+# Exercicio 1 - Modele, projete e calcule a complexidade de um programa que:
 
-a) Leia as linhas de um arquivo chamado "arq1.txt".
-
-b) Peca para o usuario inserir um texto no terminal//console.
-
-c) Compare o texto escrito pelo usuário e o texto lido no arquivo, e escreva na tela quantos termos IGUAIS e DIFERENTE.
+  a) Leia as linhas de um arquivo chamado "arq1.txt". 
+  
+  b) Peça para o usuario inserir um texto no terminal//console.
+  
+  c) Compare o texto escrito pelo usuário e o texto lido no arquivo, e escreva na tela quantos termos IGUAIS e DIFERENTE.
 
 d) Descreva as operacoes relevantes.
     
@@ -18,7 +18,7 @@ d) Descreva as operacoes relevantes.
 
 1.4 Print da Resolucao:
 
-Exercicio 2 - Dado o código a seguir, responda:
+# Exercicio 2 - Dado o código a seguir, responda:
 
 a) Quantos e quais sao os casos base//condicao de parada para a funcao funcRec1()?
 
@@ -32,7 +32,7 @@ c) Represente a pilha de execucao para a chamada funcRec1(6).
 
 2.3 ![Pilha de Execucao AEDs](https://user-images.githubusercontent.com/101759772/197531988-d92f7dc7-0869-4574-a199-42ad81fbd0a2.jpg)
   
-Exercicio 3 - Modele, projete e calcule a complexidade de um programa que:
+# Exercicio 3 - Modele, projete e calcule a complexidade de um programa que:
 
 a) Leia a primeira linha de um arquivo chamado "entrada.txt"
 
@@ -48,7 +48,7 @@ c) Descreva quais as operacoes relevantes.
     
 3.4 Print da Resolução:
 
-Exercicio 4 - Um banco enfrenta problemas de consulta em seu banco de registros. Dentre os problemas identificados pela gerencia está a localizacao das contas dos seus titulares nas listagens e nos relatorios impressos em diferentes situacoes. Um especialista de TI sugeriu ordenar as contas por meio dos CPF dos seus n titulares antes das impressoes. Dentre alguns algoritmos pré seleconados para essa ordenacao o especialista escolheu o algoritmo de ordenacao por insercao. Se voce fosse o especialista, responda:
+# Exercicio 4 - Um banco enfrenta problemas de consulta em seu banco de registros. Dentre os problemas identificados pela gerencia está a localizacao das contas dos seus titulares nas listagens e nos relatorios impressos em diferentes situacoes. Um especialista de TI sugeriu ordenar as contas por meio dos CPF dos seus n titulares antes das impressoes. Dentre alguns algoritmos pré seleconados para essa ordenacao o especialista escolheu o algoritmo de ordenacao por insercao. Se voce fosse o especialista, responda:
 
 a) O especialista escolheu um bom algoritmo?
 
