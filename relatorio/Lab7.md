@@ -25,7 +25,7 @@
 
       2.1 O caso base é quando temos um número igual a 1 no qual o resultado é o 0 e a condicao de parada é quando A é igual ou menor a 1 e também quando estoura o array.
 
-    2.2 A funcao calcula o ponto de partida 'A' acumulado ao número 3. 
+      2.2 A funcao calcula o ponto de partida 'A' acumulado ao número 3. 
 
 2.3 ![Pilha de Execucao AEDs](https://user-images.githubusercontent.com/101759772/197531988-d92f7dc7-0869-4574-a199-42ad81fbd0a2.jpg)
   
@@ -40,7 +40,12 @@
 
       3.3 Operacoes relevantes: Atribuicao.
     
-3.4 Print da Resolução:
+  3.4 Print da Resolução: ![Print da Resolução - Exercicio 2 - AEDs](https://user-images.githubusercontent.com/101759772/198067626-c54d78ed-f815-486f-acb8-86261be7f95d.jpg)
+
+  - Arquivos Analisados: [saida.txt](https://github.com/AED-PCO/lab-aed-pco-2022-2-bertoldoa3/files/9870921/saida.txt)
+                         [entrada.txt](https://github.com/AED-PCO/lab-aed-pco-2022-2-bertoldoa3/files/9870922/entrada.txt)
+  - Gráfico: ![Grafico EXE2_Lab7 - Ana Clara Bertoldo Anastacio ](https://user-images.githubusercontent.com/101759772/198068622-9fbd3953-7372-45fb-b9d2-a60612a1eef3.jpg)
+
 
 ### Exercicio 4 - Um banco enfrenta problemas de consulta em seu banco de registros. Dentre os problemas identificados pela gerencia está a localizacao das contas dos seus titulares nas listagens e nos relatorios impressos em diferentes situacoes. Um especialista de TI sugeriu ordenar as contas por meio dos CPF dos seus n titulares antes das impressoes. Dentre alguns algoritmos pré seleconados para essa ordenacao o especialista escolheu o algoritmo de ordenacao por insercao. Se voce fosse o especialista, responda:
 
