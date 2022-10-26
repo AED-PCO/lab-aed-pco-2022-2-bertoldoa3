@@ -31,6 +31,36 @@ namespace Exercicio1_Laboratorio7
 }
 
 Código Exercicio3 - 
+    
+    using System;
+
+namespace Exercicio3_Laboratorio7
+{
+    internal class Program
+    {   
+        static string InverterLinha(string LinhaArquivo){ 
+            char [] Palavra = LinhaArquivo.ToCharArray();
+            string  Invertido = string.Empty;
+
+            for(int i = Palavra.Length - 1; i >= 0; i--){
+                Invertido += Palavra[i];
+            }
+            return Invertido;
+        }
+        static void Main(string[] args)
+        {
+            String LinhaArquivo;
+            StreamReader ArqInicio = new StreamReader("C:\\AED\\entrada.txt");
+            LinhaArquivo = ArqInicio.ReadLine();
+            StreamWriter ArqFim = new StreamWriter ("C:\\AED\\saida.txt");
+            ArqFim.WriteLine(InverterLinha(LinhaArquivo));
+            
+            ArqInicio.Close();
+            ArqFim.Close();
+        }
+
+    }
+}
 
 
 Código Exercicio4 - 
