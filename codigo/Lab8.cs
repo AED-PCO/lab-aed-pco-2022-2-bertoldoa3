@@ -6,16 +6,16 @@ Exercicio 1 - Exemplo de pilha estatica
 
 Exercicio 2 - Exemplo de fila estática 
 
-namespace Exercicio1_ExemploFilaEstatica
+namespace Exercicio1_Laboratorio8
 {
     internal class Program
     {
-        static int[] InserirFila(int[] Vetor, int VarAux, int Valor)
+        static int[] InsereFila(int[] Vetor, int VarAux, int Valor)
         {
             Vetor[VarAux] = Valor;
             return Vetor;
         }
-        static int[] TirarFila(int[] Vetor)
+        static int[] RetirarFila(int[] Vetor)
         {
             int VarAux2 = Vetor[0];
             for (int A = 1; A < Vetor.Length; A++)
@@ -36,28 +36,23 @@ namespace Exercicio1_ExemploFilaEstatica
                 Valor = int.Parse(Console.ReadLine());
                 if (Pos < TamanhoVetor)
                 {
-                    InserirFila(Vetor, Pos, Valor);
+                    InsereFila(Vetor, Pos, Valor);
                     Pos += 1;
                 }
                 else
                     Console.WriteLine("Vetor não tem espaço livre!");
             }
-            TirarFila(Vetor);
+            RetirarFila(Vetor);
             Pos -= 1;
-            Console.WriteLine("A posição de referência é: " + Pos);
             if (Pos > 0)
             {
-                Console.WriteLine("Os valores na Fila são:");
-                int aux_retira = Pos;
-                for (int k = 0; k < aux_retira; k++)
+                int Aux_Retira = Pos;
+                for (int k = 0; k < Aux_Retira; k++)
                 {
-                    TirarFila(Vetor);
+                    RetirarFila(Vetor);
                     Pos -= 1;
                 }
             }
-            else
-                Console.WriteLine("A fila esta vazia");
-
         }
     }
 }
