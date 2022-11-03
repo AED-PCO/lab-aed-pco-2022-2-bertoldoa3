@@ -10,15 +10,9 @@
 ![PrintdaResolucao_Exe2_Lab8](https://user-images.githubusercontent.com/101759772/199851093-b9ab3ac2-1554-4131-9e44-7678a8147569.PNG)
 
  + Gráfico da Resolução:
+ ![Grafico_Exercicio1_Lab8](https://user-images.githubusercontent.com/101759772/199852303-5df2db7b-3ea0-4582-9e99-e318d19170f3.PNG)
+
  
- 
-
-
-
-
-
-
-
 
 ### Exercicio 2 - Incluir um exemplo de uma pilha estática
 
