@@ -1,4 +1,4 @@
-### Exercicio 1 - Incluir um exemplo de uma pilha estática 
+### Exercicio 1 - Incluir um exemplo de uma fila estática 
 
      Resolução: 
     
