@@ -60,7 +60,10 @@
 
       4.3 Comparacao, atribuicao.
 
-4.4 Print da Resolucao: 
+4.4 Print da Resolucao: ![PrintdaResolução_Laboratorio7_Exercicio4](https://user-images.githubusercontent.com/101759772/201218310-1ff72e58-025e-426e-8ca2-8b39dd85d066.PNG)
+
+- Gráfico: ![Grafico_Exercicio4_Lab7](https://user-images.githubusercontent.com/101759772/201218714-994b8285-309e-41c5-a617-9f665e2de9c1.PNG)
+
 
 ### Exercicio 5 - O código a seguir implementa uma funcao recursiva. Analise-o indique o que será retornado pela funcao, caso os parametros possuam os seguintes dados: V={10,5,7,15,22,9,30} e A =6.
 
