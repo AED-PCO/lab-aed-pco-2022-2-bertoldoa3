@@ -1,6 +1,51 @@
-Exercicio 1 - Exemplo de pilha estatica
+Exercicio 1 - Exemplo de pilha estatica // ###################################### CODIGO COM ERRO // TENHO QUE CORRIGIR ################################################
 
+namespace Laboratorio8_Pilha
+{
+    internal class Program
+    {
+        static int[] InserePilha(int[] Vetor, int VarAux, int Valor)
+        {
+            Vetor[VarAux] = Valor;
+            return Vetor;
+        }
+        static int RetiraPilha(int aux, int[] Vetor)
+        {
+            aux -= 1;
+            Console.WriteLine("Removendo da pilha o elemento: " + Vetor[aux]);
 
+            return aux;
+        }
+        static void Main(string[] args)
+        {
+            int Pos = 0, Valor = 0, TamanhoVetor = 10;
+            int[] Vetor = new int[TamanhoVetor];
+
+            for (int B = 0; B < TamanhoVetor; B++)
+            {
+                Console.WriteLine("Informe o valor que deseja incluir no vetor");
+                Valor = int.Parse(Console.ReadLine());
+                if (Pos < TamanhoVetor)
+                    InserePilha(Vetor, Pos, Valor);
+                    Pos += 1;
+                Console.WriteLine("Vetor não tem espaço livre!");
+
+                RetiraPilha(Vetor);
+
+                Pos -= 1;
+                if (Pos > 0)
+                {
+                    int Aux_Retira = Pos;
+                    for (int k = 0; k < Aux_Retira; k++)
+                    {
+                        RetiraPilha(Vetor);
+                        Pos -= 1;
+                    }
+                }
+            }
+        }
+    }
+}
 
 
 
