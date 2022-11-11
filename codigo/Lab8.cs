@@ -1,18 +1,18 @@
-Exercicio 1 - Exemplo de pilha estatica // ###################################### CODIGO COM ERRO // TENHO QUE CORRIGIR ################################################
+Exercicio 1 - Exemplo de pilha estatica 
 
 namespace Laboratorio8_Pilha
 {
     internal class Program
     {
-        static int[] InserePilha(int[] Vetor, int VarAux, int Valor)
+        static int[] InsereFila(int[] Vetor, int VarAux, int Valor)
         {
             Vetor[VarAux] = Valor;
             return Vetor;
         }
-        static int RetiraPilha(int aux, int[] Vetor)
+        static int TirarPilha(int aux, int[] Vetor)
         {
             aux -= 1;
-            Console.WriteLine("Removendo da pilha o elemento: " + Vetor[aux]);
+            Console.WriteLine("Removendo da pilha: " + Vetor[aux]);
 
             return aux;
         }
@@ -23,22 +23,26 @@ namespace Laboratorio8_Pilha
 
             for (int B = 0; B < TamanhoVetor; B++)
             {
-                Console.WriteLine("Informe o valor que deseja incluir no vetor");
+                Console.WriteLine("Qual o valor que deseja incluir no vetor");
                 Valor = int.Parse(Console.ReadLine());
                 if (Pos < TamanhoVetor)
-                    InserePilha(Vetor, Pos, Valor);
+                {
+
+                    InsereFila(Vetor, Pos, Valor);
                     Pos += 1;
-                Console.WriteLine("Vetor não tem espaço livre!");
-
-                RetiraPilha(Vetor);
-
+                }
+                else
+                {
+                    Console.WriteLine("Vetor não tem espaço!");
+                }
+                TirarPilha(Pos, Vetor);
                 Pos -= 1;
                 if (Pos > 0)
                 {
                     int Aux_Retira = Pos;
                     for (int k = 0; k < Aux_Retira; k++)
                     {
-                        RetiraPilha(Vetor);
+                        TirarPilha(Pos, Vetor);
                         Pos -= 1;
                     }
                 }
@@ -47,11 +51,9 @@ namespace Laboratorio8_Pilha
     }
 }
 
-
-
 Exercicio 2 - Exemplo de fila estática 
 
-namespace Exercicio1_Laboratorio8
+namespace Laboratorio8_Fila
 {
     internal class Program
     {
