@@ -106,3 +106,59 @@ namespace Laboratorio8_Fila
 
 
 Exercicio 3 - Exemplo de lista estática
+
+
+static int[] InserirLista(int flag, int[] Vetor, int pos, int valor)
+{
+    if (flag < 0)
+    {
+        Vetor = InsereLista(Vetor, pos, valor);
+        return Vetor;
+    }
+    if (flag > pos)
+        flag = pos;
+    for (int i = pos; i > flag; i--)
+
+    {
+        Vetor[i] = Vetor[i - 1];
+    }
+    Vetor[flag] = valor;
+    return Vetor;
+}
+
+static int[] InsereLista(int[] Vetor, int pos, int valor)
+{
+    Vetor[pos] = valor;
+    return Vetor;
+}
+static void Main(string[] args)
+{
+    static void Main(string[] args)
+    {
+        int Pos = 0, Valor = 0, TamanhoVetor = 10;
+        int[] Vetor = new int[TamanhoVetor];
+
+        for (int B = 0; B < TamanhoVetor; B++)
+        {
+            Console.WriteLine("Qual o valor que deseja incluir no vetor");
+            Valor = int.Parse(Console.ReadLine());
+            Console.WriteLine("Qual o a posição que deseja incluir no vetor");
+            Pos = int.Parse(Console.ReadLine());
+
+            if (Pos < TamanhoVetor)
+            {
+                InsereLista(Vetor, Pos, Valor);
+                Pos += 1;
+            }
+            else
+
+            Console.WriteLine("Vetor não tem espaço ou posição está errada!");
+            for (int i = 0; i < Pos; i++)
+                Console.WriteLine("Os itens da lista são: " + Vetor[i] + "com indice i = " + i);
+            Console.WriteLine("Cheguei no fim com pop igual: " + Pos);
+
+            InsereLista(Vetor, Pos, Valor);
+
+        }
+    }
+}
