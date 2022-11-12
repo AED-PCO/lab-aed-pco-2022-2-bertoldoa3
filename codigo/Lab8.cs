@@ -105,32 +105,35 @@ namespace Laboratorio8_Fila
 }
 
 
-Exercicio 3 - Exemplo de lista estática
+Exercicio 3 - Exemplo de lista estática //CODIGO COM ERRO ------------------------ AJUSTAR//
 using System;
 
 namespace Laboratorio8_Lista
-{
+    
     internal class Program
     {
-       
-static int[] InserirLista(int flag, int[] Vetor, int pos, int valor)
+ static int[] RemoverLista (int [] Vetor, int Pos){
+      
+      Vetor[Pos] = 0;
+      return Vetor; 
+ }
+    static int[] InserirLista(int PosLimite, int[] Vetor, int Pos, int Valor)
 {
-    if (flag < 0)
+    if (PosLimite < 0)
     {
-        Vetor = InsereLista(Vetor, pos, valor);
+        Vetor = InsereLista(Vetor, Pos, Valor);
         return Vetor;
     }
-    if (flag > pos)
-        flag = pos;
-    for (int i = pos; i > flag; i--)
+    if (PosLimite > Pos)
+        PosLimite = Pos;
+    for (int i = Pos; i > PosLimite; i--)
 
     {
         Vetor[i] = Vetor[i - 1];
     }
-    Vetor[flag] = valor;
+    Vetor[PosLimite] = Valor;
     return Vetor;
 }
-
 static int[] InsereLista(int[] Vetor, int pos, int valor)
 {
     Vetor[pos] = valor;
@@ -138,7 +141,7 @@ static int[] InsereLista(int[] Vetor, int pos, int valor)
 }
 static void Main(string[] args)
 {
-        int Pos = 0, Valor = 0, TamanhoVetor = 10;
+        int Pos = 0, Valor = 0, TamanhoVetor = 10, Opcao;
         int[] Vetor = new int[TamanhoVetor];
 
         for (int B = 0; B < TamanhoVetor; B++)
@@ -152,15 +155,23 @@ static void Main(string[] args)
             {
                 InsereLista(Vetor, Pos, Valor);
                 Pos += 1;
+                for (int i = 0; i < Pos; i++)
+                Console.WriteLine("Os item da lista: " + Vetor[i] + " está em sua respectiva posição = " + i);
+                InsereLista(Vetor, Pos, Valor);
             }
             else
             Console.WriteLine("Vetor não tem espaço ou posição está errada!");
-            
-            for (int i = 0; i < Pos; i++)
-                Console.WriteLine("Os item da lista: " + Vetor[i] + " está em sua respectiva posição = " + i);
-            InsereLista(Vetor, Pos, Valor);
+            Console.WriteLine("Deseja remover itens da lista? 1 - SIM 2 - NÃO");
+            Opcao = int.Parse(Console.ReadLine());
 
+            if (Opcao==1){
+            
+            RemoverLista(Vetor, Pos);
+            }
+            else
+            Console.WriteLine("As posições acabaram, você precisa remover ou procurar um indice valido.");
         }
+
     }
 }
     }
