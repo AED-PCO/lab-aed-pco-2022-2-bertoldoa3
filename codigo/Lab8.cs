@@ -108,7 +108,7 @@ namespace Laboratorio8_Fila
 Exercicio 3 - Exemplo de lista estática
 using System;
 
-namespace MyApp // Note: actual namespace depends on the project name.
+namespace Laboratorio8_Lista
 {
     internal class Program
     {
