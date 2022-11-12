@@ -106,8 +106,13 @@ namespace Laboratorio8_Fila
 
 
 Exercicio 3 - Exemplo de lista estática
+using System;
 
-
+namespace MyApp // Note: actual namespace depends on the project name.
+{
+    internal class Program
+    {
+       
 static int[] InserirLista(int flag, int[] Vetor, int pos, int valor)
 {
     if (flag < 0)
@@ -133,8 +138,6 @@ static int[] InsereLista(int[] Vetor, int pos, int valor)
 }
 static void Main(string[] args)
 {
-    static void Main(string[] args)
-    {
         int Pos = 0, Valor = 0, TamanhoVetor = 10;
         int[] Vetor = new int[TamanhoVetor];
 
@@ -151,14 +154,13 @@ static void Main(string[] args)
                 Pos += 1;
             }
             else
-
             Console.WriteLine("Vetor não tem espaço ou posição está errada!");
+            
             for (int i = 0; i < Pos; i++)
-                Console.WriteLine("Os itens da lista são: " + Vetor[i] + "com indice i = " + i);
-            Console.WriteLine("Cheguei no fim com pop igual: " + Pos);
-
+                Console.WriteLine("Os item da lista: " + Vetor[i] + " está em sua respectiva posição = " + i);
             InsereLista(Vetor, Pos, Valor);
 
         }
     }
 }
+    }
