@@ -35,4 +35,6 @@
 + Print da Resolução 
 ![PrintdaResolução_ListaEstatica_AnaClaraBertoldoAPereira](https://user-images.githubusercontent.com/101759772/201550807-6a7868bc-b869-4ed9-8a57-e114e3b90fda.jpg)
 
-+ Gráfico da Resolução:
++ Gráfico da Resolução
+![Grafico_ListaEstatica_AnaClaraBertoldoAPereira](https://user-images.githubusercontent.com/101759772/201551457-0f8fd35e-01e0-4da3-bc7b-75f622278d12.jpg)
+
