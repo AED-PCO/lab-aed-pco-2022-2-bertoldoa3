@@ -1,4 +1,4 @@
-Exercicio 1 - Exemplo de pilha estatica invertida
+Exercicio 1 - Exemplo de pilha estatica invertida ############################## CODIGO COM ERRO - AGUARDANDO CORRECAO (NAO ESTA MOSTRANDO A PILHA)
 
 
 namespace Laboratorio8_Pilha
