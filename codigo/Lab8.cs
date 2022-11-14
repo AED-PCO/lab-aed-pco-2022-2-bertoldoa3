@@ -4,17 +4,17 @@ namespace Laboratorio8_Pilha
 {
     internal class Program
     {
-        static int[] InsereFila(int[] Vetor, int VarAux, int Valor)
+        static int[] InserePilha(int[] Vetor, int VarAux, int Valor)
         {
             Vetor[VarAux] = Valor;
             return Vetor;
         }
-        static int TirarPilha(int aux, int[] Vetor)
+        static int TirarPilha(int VarAux, int[] Vetor)
         {
-            aux -= 1;
-            Console.WriteLine("Removendo da pilha: " + Vetor[aux]);
+            VarAux -= 1;
+            Console.WriteLine("Removendo da pilha: " + Vetor[VarAux]);
 
-            return aux;
+            return VarAux;
         }
         static void Main(string[] args)
         {
@@ -28,13 +28,14 @@ namespace Laboratorio8_Pilha
                 if (Pos < TamanhoVetor)
                 {
 
-                    InsereFila(Vetor, Pos, Valor);
+                    InserePilha(Vetor, Pos, Valor);
                     Pos += 1;
                 }
                 else
                 {
                     Console.WriteLine("Vetor não tem espaço!");
                 }
+            }
                 TirarPilha(Pos, Vetor);
                 Pos -= 1;
                 if (Pos > 0)
@@ -48,7 +49,6 @@ namespace Laboratorio8_Pilha
                 }
             }
         }
-    }
 }
 
 Exercicio 2 - Exemplo de fila estática 
