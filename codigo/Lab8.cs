@@ -123,9 +123,9 @@ namespace Laboratorio8_Lista
     {
         if (PosLimite < 0)
         {
-            Vetor = InsereLista(Vetor, Pos, Valor);
-            return Vetor;
-        }
+                Vetor[Pos] = Valor;
+                return Vetor;
+            }
         if (PosLimite > Pos)
             PosLimite = Pos;
         for (int i = Pos; i > PosLimite; i--)
@@ -134,11 +134,6 @@ namespace Laboratorio8_Lista
             Vetor[i] = Vetor[i - 1];
         }
         Vetor[PosLimite] = Valor;
-        return Vetor;
-    }
-    static int[] InsereLista(int[] Vetor, int pos, int valor)
-    {
-        Vetor[pos] = valor;
         return Vetor;
     }
     static void Main(string[] args)
@@ -155,11 +150,11 @@ namespace Laboratorio8_Lista
 
             if (Pos < TamanhoVetor)
             {
-                InsereLista(Vetor, Pos, Valor);
+                InserirLista(TamanhoVetor, Vetor, Pos, Valor);
                 Pos += 1;
                 for (int i = 0; i < Pos; i++)
                     Console.WriteLine("Os item da lista: " + Vetor[i] + " está em sua respectiva posição = " + i);
-                InsereLista(Vetor, Pos, Valor);
+                InserirLista(TamanhoVetor, Vetor, Pos, Valor);
             }
             else
                 Console.WriteLine("Vetor não tem espaço ou posição está errada!");
@@ -177,11 +172,11 @@ namespace Laboratorio8_Lista
             {
                 if (Pos < TamanhoVetor)
                 {
-                    InsereLista(Vetor, Pos, Valor);
+                    InserirLista(TamanhoVetor, Vetor, Pos, Valor);
                     Pos += 1;
                     for (int i = 0; i < Pos; i++)
                         Console.WriteLine("Os item da lista: " + Vetor[i] + " está em sua respectiva posição = " + i);
-                    InsereLista(Vetor, Pos, Valor);
+                    InserirLista(TamanhoVetor, Vetor, Pos, Valor);
                 }
             }
         }
