@@ -12,18 +12,19 @@
  + Gráfico da Resolução:
  ![Grafico_Exercicio1_Lab8](https://user-images.githubusercontent.com/101759772/199852303-5df2db7b-3ea0-4582-9e99-e318d19170f3.PNG)
 
- 
-
 ### Exercicio 2 - Incluir um exemplo de uma pilha estática
 
-      Resolução: 
+     Resolução: Iniciei criando duas funções, uma para inserir na pilha e outra para retirar da pilha. Na função de inserir, o valor era 
+     digitado na Main pelo usuário e, então ia chamando a função de inserir enquanto a variavel axuliar pos fosse menor que o 
+     tamanho do vetor (no caso desse codigo) enquanto é menor que 10. Depois, quando o vetor fica cheio, é chamada a função para retirada dos 
+     elementos da fila e, minha variavel Var Aux Pos sempre é decrementada por 1, já que ela sempre ira iniciar com o valor da pilha e irá decrementar. 
+     Seguindo o conceito de que na pilha o ultimo a chegar é o primeiro a sair. Faço isso enquanto não chegar a primeira posição do vetor.
       
 + Print da Resolução
-
+![PrintdaResolução_PilhaEstatica_AnaClaraBertoldoAPereira](https://user-images.githubusercontent.com/101759772/201552052-0a81fe46-31fe-4dae-979d-48965c4b72d9.jpg)
 
 + Gráfico da Resolução:
-
-
+![Grafico_Pilha7Estatica_AnaClaraBertoldoAPereira](https://user-images.githubusercontent.com/101759772/201552152-6337b599-f93b-4f7c-8c28-088820a8ac66.jpg)
 
 ### Exercicio 3 - Incluir um exemplo de uma lista
       Resolução: Iniciei criando duas funções, uma para remover e outra para inserir na lista. A de remover, as informações recebidas da main são: o vetor e a posição
