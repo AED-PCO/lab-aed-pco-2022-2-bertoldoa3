@@ -1,7 +1,6 @@
-Exercicio 1 - Exemplo de pilha estatica invertida ############################## CODIGO COM ERRO - AGUARDANDO CORRECAO (NAO ESTA MOSTRANDO A PILHA)
+Exercicio 1 - Exemplo de pilha estatica invertida ############################## CODIGO COM ERRO - AGUARDANDO CORRECAO (SO MOSTRA A ULTIMA POSIÇÃO DA PILHA INVERTIDA)
 
-
-namespace Laboratorio8_Pilha
+namespace Laboratorio8_PilhaInvertida
 {
     internal class Program
     {
@@ -10,23 +9,16 @@ namespace Laboratorio8_Pilha
             Vetor[VarAux] = Valor;
             return Vetor;
         }
-        static void InvertePilha (int[]Vetor, int TamanhoVetor)
+        static void InvertePilha(int[] Vetor, int TamanhoVetor)
         {
-            int PosInverte;
             int[] VetorInvertido = new int[TamanhoVetor];
-
-            PosInverte = TamanhoVetor;
-
-            if (PosInverte >= 0)
+            for (int A = TamanhoVetor - 1; A >= 0; A--)
             {
-                for (int I = 0; I<= TamanhoVetor; I++) {
-                    for (int A = TamanhoVetor; A > TamanhoVetor; A--)
-                    {
-                        VetorInvertido[I] = Vetor[A];
-                        Console.WriteLine("Vetor Invertido: " + VetorInvertido[I]);
-                        PosInverte--;
-                    }
-                }
+                for (int I = 0; I < TamanhoVetor; I++)
+                {
+                  VetorInvertido[A] = Vetor[I];
+                 }
+                Console.WriteLine(VetorInvertido[A]);
             }
         }
         static void Main(string[] args)
@@ -38,20 +30,18 @@ namespace Laboratorio8_Pilha
             {
                 Console.WriteLine("Qual o valor que deseja incluir no vetor");
                 Valor = int.Parse(Console.ReadLine());
+
                 if (Pos < TamanhoVetor)
                 {
-
                     InserePilha(Vetor, Pos, Valor);
                     Pos += 1;
                 }
                 else
                 {
-                    Console.WriteLine("Vetor não tem espaço!");
+                    Console.WriteLine("Vetor sem espaço, remova itens para incluir.");
                 }
             }
-
             InvertePilha(Vetor, TamanhoVetor);
         }
     }
 }
-
