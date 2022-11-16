@@ -68,7 +68,7 @@ namespace Laboratorio8_PilhaInvertida
 
 Exercicio 2 - Exemplo de cópia de pilha estatica original
 
-namespace Laboratorio8_PilhaInvertida
+namespace Laboratorio8_PilhaCopiada
 {
     internal class Program
     {
