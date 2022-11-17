@@ -122,111 +122,123 @@ namespace ClasseFila_Dinamica
 
 Exercicio 2 - Pilha utilizando classes
 
-using System;//CLASSE PILHA
+//////////////////////////////////////////////////////////////////////////////// CLASSE PILHA ////////////////////////////////////////////////////////////////////////////////
+
+
+using ClassePilha_Dinamica;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProjetoClasse
-{
-    internal class Pilha
-    {
-        const int Capacidade = 5;
-        private int quantidade = 0;
-        private int inicio = 0;
-        private int fim = 0;
-        private string[] dados = new string[Capacidade];
-
-        public int tamanho()
-        {
-            return quantidade;
-        }
-
-        public void inserirElemento(string valor_i)
-        {
-            if (tamanho() == Capacidade)
-            {
-                throw new Exception("Pilha cheia");
-            }
-            else
-            {
-                dados[inicio] = valor_i;
-                inicio = (inicio + 1) % Capacidade;
-                quantidade++;
-            }
-        }
-        public string RemoveElemento()
-        {
-            if (tamanho() == 0)
-            {
-                throw new Exception("Pilha Vazia");
-            }
-            else
-            {
-                String valor = dados[fim];
-                fim = (fim + 1) % Capacidade;
-                quantidade--;
-                return valor;
-            }
-        }
-    }
-}
-
-
-using System;//MAIN PILHA
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ProjetoClasse
+namespace ClassePilha
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            string op = "", valor;
+            string Opcao, Valor;
 
-            Pilha minhaPilha = new Pilha();
-            Console.WriteLine("Sistemas de Fila");
+            Pilha_Aed Pilha = new Pilha_Aed();
 
             do
             {
-                try
+                Console.WriteLine("");
+                Console.WriteLine("Bem vindo ao programa de pilhas.");
+                Console.WriteLine("Lembre-se o ultimo a chegar é o primeiro a ir embora! Chegue tarde e evite pilhas");
+                Console.WriteLine("Menu para utilizar o programa:");
+                Console.WriteLine("1 - Inserir");
+                Console.WriteLine("2 - Remover");
+                Console.WriteLine("3 - Quantidade de Pessoas na Pilha");
+                Console.WriteLine("");
+
+                Opcao = Console.ReadLine();
+
+                switch (Opcao)
                 {
-                    Console.WriteLine("\n1 -> inserir \n2 -> remover \n3 -> mostrar");
-                    op = Console.ReadLine();
+                    case "1":
+                        Console.Write("Qual o elemento para inserir na pilha: ");
+                        Valor = Console.ReadLine();
+                        Pilha.InserirElemento(Valor);
+                        break;
 
-                    switch (op)
-                    {
-                        case "1":
-                            Console.Write("Qual o elemento para inserir na fila: ");
-                            valor = Console.ReadLine();
-                            minhaPilha.inserirElemento(valor);
-                            break;
+                    case "2":
+                        Console.Write("Removendo o ultimo elemento na pilha: ");
+                        Pilha.RemoveElemento();
+                        break;
 
-                        case "2":
-                            Console.Write("Qual o elemento para Remover na fila: ");
-                            valor = Console.ReadLine();
-                            minhaPilha.RemoveElemento();
-                            break;
+                    case "3":
+                        Console.Write("Tamanho da pilha: ");
+                        Pilha.Tamanho();
+                        break;
 
-                        case "3":
-                            Console.Write("Quantidade total de elementos: ");
-                            minhaPilha.tamanho();
-                            break;
-
-                        default:
-                            Console.WriteLine("Opção inválida!!");
-                            break;
-                    }
+                    default:
+                        Console.WriteLine("Opção inválida!!");
+                        break;
                 }
-                catch (Exception erro)
+            } while (Opcao != "9");
+        }
+    }
+}
+
+//////////////////////////////////////////////////////////////////////////////// MAIN PILHA ////////////////////////////////////////////////////////////////////////////////
+
+
+
+using ClassePilha_Dinamica;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ClassePilha
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            string Opcao, Valor;
+
+            Pilha_Aed Pilha = new Pilha_Aed();
+
+            do
+            {
+                Console.WriteLine("");
+                Console.WriteLine("Bem vindo ao programa de pilhas.");
+                Console.WriteLine("Lembre-se o ultimo a chegar é o primeiro a ir embora! Chegue tarde e evite pilhas");
+                Console.WriteLine("Menu para utilizar o programa:");
+                Console.WriteLine("1 - Inserir");
+                Console.WriteLine("2 - Remover");
+                Console.WriteLine("3 - Quantidade de Pessoas na Pilha");
+                Console.WriteLine("");
+
+                Opcao = Console.ReadLine();
+
+                switch (Opcao)
                 {
-                    Console.WriteLine(erro.Message);
+                    case "1":
+                        Console.Write("Qual o elemento para inserir na pilha: ");
+                        Valor = Console.ReadLine();
+                        Pilha.InserirElemento(Valor);
+                        break;
+
+                    case "2":
+                        Console.Write("Removendo o ultimo elemento na pilha: ");
+                        Pilha.RemoveElemento();
+                        break;
+
+                    case "3":
+                        Console.Write("Tamanho da pilha: ");
+                        Pilha.Tamanho();
+                        break;
+
+                    default:
+                        Console.WriteLine("Opção inválida!!");
+                        break;
                 }
-            } while (op != "9");
+            } while (Opcao != "9");
         }
     }
 }
