@@ -245,7 +245,122 @@ namespace ClassePilha
 
 Exercicio 3 - Lista utilizando classes
 
-################################# AGUARDANDO ##########################################################
+//////////////////////////////////////////////////////////////////////////////// MAIN LISTA ////////////////////////////////////////////////////////////////////////////////
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ProjetoClasse
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            string Opcao, Valor;
+
+            Lista Lista_Aed = new Lista();
+            do
+            {
+                Console.WriteLine("");
+                Console.WriteLine("Bem vindo ao programa de lista.");
+                Console.WriteLine("Menu para utilizar o programa:");
+                Console.WriteLine("1 - Inserir");
+                Console.WriteLine("2 - Remover");
+                Console.WriteLine("3 - Quantidade de Pessoas na Lista");
+                Console.WriteLine("");
+
+                Opcao = Console.ReadLine();
+
+                switch (Opcao)
+                    {
+                        case "1":
+                            Console.Write("Qual o elemento para inserir na fila: ");
+                            Valor = Console.ReadLine();
+                            Lista_Aed.inserirElemento(Valor);
+                            break;
+
+                        case "2":
+                            Console.Write("Qual o elemento para Remover na fila: ");
+                            Valor = Console.ReadLine();
+                            Lista_Aed.RemoveElemento();
+                            break;
+
+                        case "3":
+                            Console.Write("Quantidade total de elementos: ");
+                            Lista_Aed.tamanho();
+                            break;
+
+                        default:
+                            Console.WriteLine("Opção inválida!");
+                            break;
+                    }
+                
+                {
+                }
+            } while (Opcao != "9");
+        }
+    }
+}
+
+//////////////////////////////////////////////////////////////////////////////// CLASSE LISTA ////////////////////////////////////////////////////////////////////////////////
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ProjetoClasse
+{
+    internal class Lista
+    {
+        const int Capacidade = 5;
+        private int quantidade = 0;
+        private int inicio = 0;
+        private int fim = 0;
+        private string[] dados = new string[Capacidade];
+
+        public int tamanho()
+        {
+            return quantidade;
+        }
+
+        public void inserirElemento(string valor_i)
+        {
+            if (tamanho() == Capacidade)
+            {
+                throw new Exception("Pilha cheia");
+            }
+            else
+            {
+                dados[inicio] = valor_i;
+                inicio = (inicio + 1) % Capacidade;
+                quantidade++;
+            }
+        }
+        public string RemoveElemento()
+        {
+            if (tamanho() == 0)
+            {
+                throw new Exception("Pilha Vazia");
+            }
+            else
+            {
+                String valor = dados[fim];
+                fim = (fim + 1) % Capacidade;
+                quantidade--;
+                return valor;
+            }
+        }
+    }
+}
+
+
 
 Exercicio 4 - Calculadora Polonesa Utilizando Pilha/Classes
 
