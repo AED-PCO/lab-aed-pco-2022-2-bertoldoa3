@@ -1,7 +1,8 @@
 Exercicio 1 - Fila Utilizando Classes
 
 //////////////////////////////////////////////////////////////////////////////// MAIN FILA ////////////////////////////////////////////////////////////////////////////////
-
+using PosicaoFila;
+using FilaClasse;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,9 +15,10 @@ namespace ClasseFila
     {
         static void Main(string[] args)
         {
-            string Opcao, Valor;
+            string Opcao;
+            int Valor;
 
-            Fila Fila_Aed = new Fila();
+            Posicao Posicao_Aed = new Posicao();
 
             do
             {
@@ -25,96 +27,116 @@ namespace ClasseFila
                 Console.WriteLine("Lembre-se o primeiro a chegar é o primeiro a ir embora! Chegue cedo e evite filas");
                 Console.WriteLine("Menu para utilizar o programa:");
                 Console.WriteLine("1 - Inserir");
-                Console.WriteLine("2 - Remover");
-                Console.WriteLine("3 - Quantidade de Pessoas na Fila");
+                Console.WriteLine("2 - Imprimir Numeros na fila");
+                Console.WriteLine("3 - Remover pessoas da fila");
                 Console.WriteLine("");
 
                 Opcao = Console.ReadLine();
 
-                    switch (Opcao)
-                    {
-                        case "1":
-                            Console.Write("Qual o elemento para inserir na fila: ");
-                            Valor = Console.ReadLine();
-                            Fila_Aed.InserirElemento(Valor);
-                            break;
-
-                        case "2":
-                            Console.Write("Removendo o primeiro elemento na fila");
-                            Fila_Aed.RemoveElemento();
-                            break;
-
-                        case "3":
-                            Console.Write("Tamanho da fila: ");
-                            Fila_Aed.Tamanho();
-                            break;
-
-                        default:
-                            Console.WriteLine("Opção inválida!!");
-                            break;
-                    }
-             } while (Opcao != "9");
+                switch (Opcao)
+                {
+                    case "1":
+                        Console.Write("Qual o elemento para inserir na fila: ");
+                        Valor = int.Parse(Console.ReadLine());
+                        Fila.Inserir(Valor);
+                        break;
+                    case "2":
+                        Fila.Imprimir();
+                        Console.ReadKey();
+                        break;
+                    case "3":
+                        Console.WriteLine("O elemento removido foi:" + Fila.Remover());
+                        Console.ReadKey();
+                        break;
+                }
+                Console.Clear();
+            } while (Opcao != "9");
         }
     }
 }
 
 //////////////////////////////////////////////////////////////////////////////// CLASSE FILA ////////////////////////////////////////////////////////////////////////////////
 
+using PosicaoFila;
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace FilaClasse
+{
+    internal class Fila
+    {
+        public static Posicao Inicio = new Posicao();
+        public static Posicao Fim = Inicio;
+
+        Posicao PosicaoFila = new Posicao();
+
+        public Fila()
+        {
+            Inicio = new Posicao();
+            Fim = Inicio;
+        }
+
+        public static void Inserir(int Numero)
+        {
+            Posicao NovaPosicao = new Posicao();
+            NovaPosicao.Elemento = Numero;
+
+            Fim.Apontador = NovaPosicao;
+            Fim = NovaPosicao;
+        }
+        public static void Imprimir()
+        {
+            Posicao A = Inicio.Apontador;
+
+            Console.Write("Sua fila está composta pelos seguintes elementos:");
+            while (A != null)
+            {
+                Console.Write(A.Elemento + " ");
+                A = A.Apontador;
+            }
+        }
+        public static int Remover()
+        {
+            if (Inicio == Fim)
+                return 0;
+
+            Inicio = Inicio.Apontador;
+            int Remover = Inicio.Elemento;
+
+            return Remover;
+
+        }
+    }
+}
+
+//////////////////////////////////////////////////////////////////////////////// POSICAO FILA ////////////////////////////////////////////////////////////////////////////////
+
+using System;
+using FilaClasse;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ClasseFila_Dinamica
+namespace PosicaoFila
 {
-    internal class Fila
+    internal class Posicao
     {
-        const int Capacidade = 5;
-        private int Quant = 0;
-        private int Inicio = 0;
-        private int Fim = 0;
-        private string[] DadosFila = new string[Capacidade];
+        public int Elemento;
+        public Posicao Apontador;
 
-        public int Tamanho()
-        {   
-            Console.WriteLine(Quant);
-            return Quant;
+        public Posicao()
+        {
+            this.Elemento = 0; 
         }
 
-        public void InserirElemento(string Valor)
+        public Posicao(int elem)
         {
-            if (Tamanho() == Capacidade)
-            {
-                Console.WriteLine("Fila cheia");
-            }
-            else
-            {
-                DadosFila[Fim] = Valor; // O vetor recebe o valor digitado na ultima posição.
-                Fim = (Fim + 1) % Capacidade; // Depois de inserir na ultima posição, inclui na variavel fim o seu valor acrescido em 1
-                                              // e divide pelo resto.
-                Quant++; // Quantidade recebe mais um pois é um acumulador que mostra em outra função a quantidade
-                         // De numeros na fila
-            }
-        }
-        public string RemoveElemento()
-        {
-            string Valor;
-            if (Tamanho() == 0)
-            {
-                return "Fila vazia";
-                
-            }
-            else
-            {
-                Valor = DadosFila[Fim]; // A variavel valor, recebe 0, o valor pré definido para a variavel FIM.
-                Inicio = (Inicio + 1) % Capacidade; // Depois de remover na primeira posição baseado na lei da fila,
-                                                    // inclui na variavel inicio o seu valor acrescido em 1
-                                                    // e divide pelo resto da capacidade.
-                Quant--; // Quantidade recebe ela menos um para mostrar que agora tem menos um número na fila.
-                return Valor;
-            }
+            this.Elemento = elem;
         }
     }
 }
