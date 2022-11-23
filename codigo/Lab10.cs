@@ -146,94 +146,103 @@ Exercicio 2 - Pilha utilizando classes
 
 //////////////////////////////////////////////////////////////////////////////// CLASSE PILHA ////////////////////////////////////////////////////////////////////////////////
 
-
-using ClassePilha_Dinamica;
+using PosicaoPilha;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ClassePilha
+namespace PilhaClasse
 {
-    internal class Program
+    internal class Pilha
     {
-        static void Main(string[] args)
+        public static Posicao Inicio = new Posicao();
+        public static Posicao Fim = Inicio;
+
+        Posicao PosicaoFila = new Posicao();
+
+        public Pilha()
         {
-            string Opcao, Valor;
+            Inicio = new Posicao();
+            Fim = Inicio;
+        }
 
-            Pilha_Aed Pilha = new Pilha_Aed();
+        public static void Inserir(int Numero)
+        {
+            Posicao NovaPosicao = new Posicao();
+            NovaPosicao.Elemento = Numero;
 
-            do
+            Fim.Apontador = NovaPosicao;
+            Fim = NovaPosicao;
+        }
+        public static void Imprimir()
+        {
+            Posicao A = Inicio.Apontador;
+
+            Console.Write("Sua pilha está composta pelos seguintes elementos:");
+            while (A != null)
             {
-                Console.WriteLine("");
-                Console.WriteLine("Bem vindo ao programa de pilhas.");
-                Console.WriteLine("Lembre-se o ultimo a chegar é o primeiro a ir embora! Chegue tarde e evite pilhas");
-                Console.WriteLine("Menu para utilizar o programa:");
-                Console.WriteLine("1 - Inserir");
-                Console.WriteLine("2 - Remover");
-                Console.WriteLine("3 - Quantidade de Pessoas na Pilha");
-                Console.WriteLine("");
+                Console.Write(A.Elemento + " ");
+                A = A.Apontador;
+            }
+        }
+        public static int Remover()
+        {
+            if (Inicio == Fim)
+                return 0;
 
-                Opcao = Console.ReadLine();
+            int Remover = Fim.Elemento;
+            Posicao Aux = Inicio;
 
-                switch (Opcao)
-                {
-                    case "1":
-                        Console.Write("Qual o elemento para inserir na pilha: ");
-                        Valor = Console.ReadLine();
-                        Pilha.InserirElemento(Valor);
-                        break;
 
-                    case "2":
-                        Console.Write("Removendo o ultimo elemento na pilha: ");
-                        Pilha.RemoveElemento();
-                        break;
+            while (Aux.Apontador != Fim)
+            {
+              Aux = Aux.Apontador;
+            }
 
-                    case "3":
-                        Console.Write("Tamanho da pilha: ");
-                        Pilha.Tamanho();
-                        break;
+            Fim = Aux;
+            Fim.Apontador = null;
 
-                    default:
-                        Console.WriteLine("Opção inválida!!");
-                        break;
-                }
-            } while (Opcao != "9");
+            return Remover;
+
+
         }
     }
 }
+
 
 //////////////////////////////////////////////////////////////////////////////// MAIN PILHA ////////////////////////////////////////////////////////////////////////////////
 
 
-
-using ClassePilha_Dinamica;
+using PosicaoPilha;
+using PilhaClasse;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ClassePilha
+namespace ClasseFila
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            string Opcao, Valor;
+            string Opcao;
+            int Valor;
 
-            Pilha_Aed Pilha = new Pilha_Aed();
+            Posicao Posicao_Aed = new Posicao();
 
             do
             {
                 Console.WriteLine("");
                 Console.WriteLine("Bem vindo ao programa de pilhas.");
-                Console.WriteLine("Lembre-se o ultimo a chegar é o primeiro a ir embora! Chegue tarde e evite pilhas");
+                Console.WriteLine("Lembre-se o primeiro a chegar é o ultimo a ir embora! Chegue tarde e evite pilhas");
                 Console.WriteLine("Menu para utilizar o programa:");
                 Console.WriteLine("1 - Inserir");
-                Console.WriteLine("2 - Remover");
-                Console.WriteLine("3 - Quantidade de Pessoas na Pilha");
+                Console.WriteLine("2 - Imprimir Numeros na pilha");
+                Console.WriteLine("3 - Remover pessoas da pilha");
                 Console.WriteLine("");
 
                 Opcao = Console.ReadLine();
@@ -242,28 +251,53 @@ namespace ClassePilha
                 {
                     case "1":
                         Console.Write("Qual o elemento para inserir na pilha: ");
-                        Valor = Console.ReadLine();
-                        Pilha.InserirElemento(Valor);
+                        Valor = int.Parse(Console.ReadLine());
+                        Pilha.Inserir(Valor);
                         break;
-
                     case "2":
-                        Console.Write("Removendo o ultimo elemento na pilha: ");
-                        Pilha.RemoveElemento();
+                        Pilha.Imprimir();
+                        Console.ReadKey();
                         break;
-
                     case "3":
-                        Console.Write("Tamanho da pilha: ");
-                        Pilha.Tamanho();
-                        break;
-
-                    default:
-                        Console.WriteLine("Opção inválida!!");
+                        Console.WriteLine("O elemento removido foi:" + Pilha.Remover());
+                        Console.ReadKey();
                         break;
                 }
+                Console.Clear();
             } while (Opcao != "9");
         }
     }
 }
+
+//////////////////////////////////////////////////////////////////////////////// CLASSE POSICAO ////////////////////////////////////////////////////////////////////////////////
+
+using System;
+using PilhaClasse;
+using System.Collections.Generic;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace PosicaoPilha
+{
+    internal class Posicao
+    {
+        public int Elemento;
+        public Posicao Apontador;
+
+        public Posicao()
+        {
+            this.Elemento = 0;
+        }
+
+        public Posicao(int elem)
+        {
+            this.Elemento = elem;
+        }
+    }
+}
+
 
 Exercicio 3 - Lista utilizando classes
 
