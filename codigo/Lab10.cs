@@ -299,64 +299,60 @@ namespace PosicaoPilha
 }
 
 
-Exercicio 3 - Lista utilizando classes
+Exercicio 3 - Lista utilizando classes (Codigo com erro)
 
 //////////////////////////////////////////////////////////////////////////////// MAIN LISTA ////////////////////////////////////////////////////////////////////////////////
 
-
+using PosicaoLista;
+using ListaClasse;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProjetoClasse
+namespace ClasseFila
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            string Opcao, Valor;
+            string Opcao;
+            int Valor;
 
-            Lista Lista_Aed = new Lista();
+            Posicao Posicao_Aed = new Posicao();
+
             do
             {
                 Console.WriteLine("");
-                Console.WriteLine("Bem vindo ao programa de lista.");
+                Console.WriteLine("Bem vindo ao programa de listas.");
+                Console.WriteLine("Lembre-se você pode ir embora a qualquer momento! Nossas chamadas são aleatorias ou por ordem de sorte");
                 Console.WriteLine("Menu para utilizar o programa:");
                 Console.WriteLine("1 - Inserir");
-                Console.WriteLine("2 - Remover");
-                Console.WriteLine("3 - Quantidade de Pessoas na Lista");
+                Console.WriteLine("2 - Imprimir Elementos na Lista");
+                Console.WriteLine("3 - Remover Elementos da Lista");
                 Console.WriteLine("");
 
                 Opcao = Console.ReadLine();
 
                 switch (Opcao)
-                    {
-                        case "1":
-                            Console.Write("Qual o elemento para inserir na fila: ");
-                            Valor = Console.ReadLine();
-                            Lista_Aed.inserirElemento(Valor);
-                            break;
-
-                        case "2":
-                            Console.Write("Qual o elemento para Remover na fila: ");
-                            Valor = Console.ReadLine();
-                            Lista_Aed.RemoveElemento();
-                            break;
-
-                        case "3":
-                            Console.Write("Quantidade total de elementos: ");
-                            Lista_Aed.tamanho();
-                            break;
-
-                        default:
-                            Console.WriteLine("Opção inválida!");
-                            break;
-                    }
-                
                 {
+                    case "1":
+                        Console.Write("Qual o elemento para inserir na lista");
+                        Valor = int.Parse(Console.ReadLine());
+                        Lista.Inserir(Valor);
+                        break;
+                    case "2":
+                        Lista.Imprimir();
+                        Console.ReadKey();
+                        break;
+                    case "3":
+                        Console.WriteLine("O elemento removido foi:");
+                        Lista.Remover();
+                        Console.ReadKey();
+                        break;
                 }
+                Console.Clear();
             } while (Opcao != "9");
         }
     }
@@ -364,58 +360,100 @@ namespace ProjetoClasse
 
 //////////////////////////////////////////////////////////////////////////////// CLASSE LISTA ////////////////////////////////////////////////////////////////////////////////
 
-
+using PosicaoLista;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProjetoClasse
+namespace ListaClasse
 {
     internal class Lista
     {
-        const int Capacidade = 5;
-        private int quantidade = 0;
-        private int inicio = 0;
-        private int fim = 0;
-        private string[] dados = new string[Capacidade];
+        public static Posicao Inicio = new Posicao();
+        public static Posicao Fim = Inicio;
 
-        public int tamanho()
+        Posicao PosicaoFila = new Posicao();
+
+        public Lista()
         {
-            return quantidade;
+            Inicio = new Posicao();
+            Fim = Inicio;
         }
 
-        public void inserirElemento(string valor_i)
+        public static void Inserir(int Numero)
         {
-            if (tamanho() == Capacidade)
+            Posicao NovaPosicao = new Posicao();
+            NovaPosicao.Elemento = Numero;
+
+            Fim.Apontador = NovaPosicao;
+            Fim = NovaPosicao;
+        }
+        public static void Imprimir()
+        {
+            Posicao A = Inicio.Apontador;
+
+            Console.Write("Sua lista está composta pelos seguintes elementos:");
+            while (A != null)
             {
-                throw new Exception("Pilha cheia");
-            }
-            else
-            {
-                dados[inicio] = valor_i;
-                inicio = (inicio + 1) % Capacidade;
-                quantidade++;
+                Console.Write(A.Elemento + " ");
+                A = A.Apontador;
             }
         }
-        public string RemoveElemento()
+        public static void Remover()
         {
-            if (tamanho() == 0)
+            int NumeroRemover;
+            int A = Inicio.Elemento;
+            
+            if (Inicio == Fim)
+                Console.WriteLine("0");
+
+            Console.WriteLine("Informe o número que deseja remover na lista");
+            NumeroRemover = int.Parse(Console.ReadLine());
+            while (NumeroRemover != A)
             {
-                throw new Exception("Pilha Vazia");
+                A = Inicio.Elemento;
             }
-            else
-            {
-                String valor = dados[fim];
-                fim = (fim + 1) % Capacidade;
-                quantidade--;
-                return valor;
-            }
+
+            Inicio = Inicio.Apontador;
+            int Remover = Inicio.Elemento;
+            Console.WriteLine("Elemento removido" + Remover);
+            Console.ReadKey();
+
         }
     }
 }
 
+//////////////////////////////////////////////////////////////////////////////// CLASSE POSICAO ////////////////////////////////////////////////////////////////////////////////
+
+using System;
+using ListaClasse;
+using System.Collections.Generic;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace PosicaoLista
+{
+    internal class Posicao
+    {
+        public int Elemento;
+        public Posicao Apontador;
+
+        public Posicao()
+        {
+            this.Elemento = 0;
+        }
+
+        public Posicao(int Elemento)
+        {
+            this.Elemento = Elemento;
+        }
+    }
+}
 
 
 Exercicio 4 - Calculadora Polonesa Utilizando Pilha/Classes
