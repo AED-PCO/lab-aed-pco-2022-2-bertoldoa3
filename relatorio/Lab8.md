@@ -38,4 +38,3 @@
 
 + Gráfico da Resolução
 ![Grafico_ListaEstatica_AnaClaraBertoldoAPereira](https://user-images.githubusercontent.com/101759772/201551457-0f8fd35e-01e0-4da3-bc7b-75f622278d12.jpg)
-
