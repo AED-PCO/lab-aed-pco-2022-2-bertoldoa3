@@ -70,7 +70,11 @@
 
 ## Exercicio 3 - Incluir um exemplo de uma lista dinâmica com classes
 
-    Resolução:
+    Resolução: Na classe Posição, somemnte armazeno o elemento digitado pelo usuário na Main e aponto para a próxima posição, essa classe também auxilia na remoção 
+    dos elementos, fazendo com que a fila fique dinamica. Na classe Lista, tenho três funções, uma para inserir, outra para imprimir e outra para remover e uma para       mostrar a quantidade de elementos.
+    No caso da inserção, eu passo o valor digitado pelo usuario da Main e vou apontando para a próxima, adiciono a posição e insiro o elemento digitado sucessivamente
+    até que o usuário não queira mais digitar o valor. No método de remoção, ele irá receber o número que o usuário deseja remover e percorrer toda a lista, se ele       achar ele remove o número (se o número estiver repetido ele remove os dois elementos). Já na hora de imprimir a lista, ele mostra todos os elementos enquanto meu     apontador for diferente de nulo, já que quando ele apontar para nulo significa que estou na ultima posição. Minha ultima função é para informar quantos elementos
+    possui na lista, eu percorro a lista toda enquanto o apontador for diferente de nulo e coloco em um contador para mostrar quantas posições aquela lista possui.
     
 + Prints da Resolução: 
 
