@@ -299,7 +299,7 @@ namespace PosicaoPilha
 }
 
 
-Exercicio 3 - Lista utilizando classes (Codigo com erro)
+Exercicio 3 - Lista utilizando classes 
 
 //////////////////////////////////////////////////////////////////////////////// MAIN LISTA ////////////////////////////////////////////////////////////////////////////////
 
@@ -331,6 +331,7 @@ namespace ClasseFila
                 Console.WriteLine("1 - Inserir");
                 Console.WriteLine("2 - Imprimir Elementos na Lista");
                 Console.WriteLine("3 - Remover Elementos da Lista");
+                Console.WriteLine("4 - Visualizar Quantos Elementos Tem na lista");
                 Console.WriteLine("");
 
                 Opcao = Console.ReadLine();
@@ -347,10 +348,16 @@ namespace ClasseFila
                         Console.ReadKey();
                         break;
                     case "3":
-                        Console.WriteLine("O elemento removido foi:");
-                        Lista.Remover();
+                        Console.WriteLine("Qual o elemento para remoção da lista:");
+                        Valor = int.Parse(Console.ReadLine());
+                        Lista.Remover(Valor);
                         Console.ReadKey();
                         break;
+                    case "4":
+                        Console.WriteLine("A quantidade de elementos que tem na lista é:" + Lista.ContadorLista());
+                        Console.ReadKey();
+                        break;
+
                 }
                 Console.Clear();
             } while (Opcao != "9");
@@ -359,7 +366,6 @@ namespace ClasseFila
 }
 
 //////////////////////////////////////////////////////////////////////////////// CLASSE LISTA ////////////////////////////////////////////////////////////////////////////////
-
 using PosicaoLista;
 using System;
 using System.Collections.Generic;
@@ -367,6 +373,7 @@ using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace ListaClasse
 {
@@ -382,7 +389,17 @@ namespace ListaClasse
             Inicio = new Posicao();
             Fim = Inicio;
         }
+        public static int ContadorLista()
+        {
+            Posicao PosicaoAuxiliar = Inicio;
+            int Contador = 0;
 
+            while (PosicaoAuxiliar.Apontador != null)
+            {
+                Contador++;
+            }
+            return Contador;
+        }
         public static void Inserir(int Numero)
         {
             Posicao NovaPosicao = new Posicao();
@@ -402,29 +419,31 @@ namespace ListaClasse
                 A = A.Apontador;
             }
         }
-        public static void Remover()
+        public static void Remover(int Numero)
         {
-            int NumeroRemover;
-            int A = Inicio.Elemento;
-            
-            if (Inicio == Fim)
-                Console.WriteLine("0");
+            Posicao A = Inicio.Apontador;
 
-            Console.WriteLine("Informe o número que deseja remover na lista");
-            NumeroRemover = int.Parse(Console.ReadLine());
-            while (NumeroRemover != A)
+            if (A.Apontador == null)
+                Console.WriteLine("A Lista está vazia");
+            else
             {
-                A = Inicio.Elemento;
+                Posicao PosicaoAuxiliar = Inicio;
+                while (PosicaoAuxiliar.Apontador != null)
+                {
+                    if (PosicaoAuxiliar.Apontador.Elemento == Numero)
+                    {
+                        PosicaoAuxiliar.Apontador = PosicaoAuxiliar.Apontador.Apontador;
+                    }
+                    else
+                        PosicaoAuxiliar = PosicaoAuxiliar.Apontador;
+                }
             }
-
-            Inicio = Inicio.Apontador;
-            int Remover = Inicio.Elemento;
-            Console.WriteLine("Elemento removido" + Remover);
-            Console.ReadKey();
-
+            Console.WriteLine("O elemento removido foi:" + Numero);
         }
     }
-}
+    }
+
+
 
 //////////////////////////////////////////////////////////////////////////////// CLASSE POSICAO ////////////////////////////////////////////////////////////////////////////////
 
