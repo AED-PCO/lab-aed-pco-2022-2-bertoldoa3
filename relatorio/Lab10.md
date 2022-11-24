@@ -29,7 +29,7 @@
 ### Mostrando apos remover
 ![PrintdaResolucao_ImprimindoElementosAposExcluir_AnaClaraBertoldoAnastacioPereira](https://user-images.githubusercontent.com/101759772/203659935-8e7b3c80-1f98-49d6-ad0b-4953ce3306ae.jpg)
 
-## Exercicio 1 - Incluir um exemplo de uma pilha dinâmica com classes
+## Exercicio 2 - Incluir um exemplo de uma pilha dinâmica com classes
     
     Resolução:
     
