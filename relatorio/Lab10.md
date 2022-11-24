@@ -1,7 +1,12 @@
 
 ## Exercicio 1 - Incluir um exemplo de uma fila dinâmica com classes
 
-    Resolução:
+    Resolução: Na classe Posição, somemnte armazeno o elemento digitado pelo usuário na Main e aponto para a próxima posição, essa classe também auxilia na remoção 
+    dos elementos, fazendo com que a fila fique dinamica. Na classe fila, tenho três funções, uma para inserir, outra para imprimir e outra para remover.
+    No caso da inserção, eu passo o valor digitado pelo usuario da Main e vou apontando para a próxima, adiciono a posição e insiro o elemento digitado sucessivamente
+    até que o usuário não queira mais digitar o valor. No método de remoção, ele irá remover sempre da primeira posição e apontar para a próxima. Já na hora de     
+    imprimir a fila, ele mostra todos os elementos enquanto meu apontador for diferente de nulo, já que quando ele apontar para nulo significa que estou na ultima 
+    posição.
     
     
 + Prints da Resolução: 
