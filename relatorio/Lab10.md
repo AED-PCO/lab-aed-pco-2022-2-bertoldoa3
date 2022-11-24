@@ -20,6 +20,8 @@
 ![PrintdaResolucao_IncluindoElemento2_AnaClaraBertoldoAnastacioPereira](https://user-images.githubusercontent.com/101759772/203659713-00b83b13-21ff-4e71-a681-9cca99d0dd0f.jpg)
 ![PrintdaResolucao_IncluindoElemento3_AnaClaraBertoldoAnastacioPereira](https://user-images.githubusercontent.com/101759772/203659714-f8f0f5c4-eb6a-441a-aa9e-0dad2af4b0a2.jpg)
 
+ - Observação: A sequencia das imagens não ficou conforme os itens foram inseridos, os itens foram inseridos conforme consta na imagem de resolução.
+
 ## Mostrando Elementos S/ Remover
 ![PrintdaResolucao_ImprimindoElementos_AnaClaraBertoldoAnastacioPereira](https://user-images.githubusercontent.com/101759772/203659828-0c7256ad-1655-4448-b363-b8f59ec15cfb.jpg)
 
