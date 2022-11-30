@@ -198,8 +198,7 @@ namespace Laboratorio8_FilaInvertida
     }
     }
 
-Exercicio 4 - Copia de metade de uma lista para outra lista (metade com a ordem original da lista e outra metade com a ordem invertida) // CODIGO COM ERRO //
-    
+Exercicio 4 - Copia de metade de uma lista para outra lista (metade com a ordem original da lista e outra metade com a ordem invertida) 
 using System;
 
 namespace Laboratorio8_Lista
@@ -235,9 +234,9 @@ namespace Laboratorio8_Lista
         {
             int[] VetorInvertido = new int[TamanhoVetor];
 
-            for (int J = TamanhoVetor/2; J < TamanhoVetor; J++)
+            for (int J = TamanhoVetor / 2; J < TamanhoVetor; J++)
             {
-                for (int I = (TamanhoVetor - 1)/2; I >= 0; I--)
+                for (int I = (TamanhoVetor - 1) / 2; I >= 0; I--)
                 {
                     VetorInvertido[I] = Vetor[J];
                     J++;
@@ -247,9 +246,9 @@ namespace Laboratorio8_Lista
         }
         static void Main(string[] args)
         {
-            int Pos = 0, Valor = 0, TamanhoVetor = 10;
+            int Pos = 0, Valor = 0, TamanhoVetor = 4;
             int[] Vetor = new int[TamanhoVetor];
-            int[] VetorInvertidoVar = new int[TamanhoVetor / 2];
+            int[] VetorInvertidoVar = new int[TamanhoVetor/2];
 
             for (int B = 0; B < TamanhoVetor; B++)
             {
@@ -263,8 +262,7 @@ namespace Laboratorio8_Lista
                     InserirLista(TamanhoVetor, Vetor, Pos, Valor);
                     Pos += 1;
                     for (int i = 0; i < Pos; i++)
-                    //Console.WriteLine("Os item da lista: " + Vetor[i] + " está em sua respectiva posição = " + i);
-                    InserirLista(TamanhoVetor, Vetor, Pos, Valor);
+                        InserirLista(TamanhoVetor, Vetor, Pos, Valor);
                 }
                 Console.Write("Lista Original: ");
                 MostraVetor(Vetor);
