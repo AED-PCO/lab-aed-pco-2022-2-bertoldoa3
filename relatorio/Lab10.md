@@ -98,3 +98,13 @@
 
 ### Mostrando Elementos Após Remover:
 ![PrintdaResolucao_ImprimindoAposRemover_AnaClaraBertoldoAnastacioPereira](https://user-images.githubusercontent.com/101759772/203767873-3604388f-ed17-472f-9a58-2835ffebadd1.jpg)
+
+### Vídeo Explicativo
+
+https://user-images.githubusercontent.com/101759772/204809370-30c67218-a29f-4d3f-a8cc-53ba863f789a.mp4
+
+## Exercicio 4 - Calculadora Polonesa
+
+AGUARDANDO
+
+
