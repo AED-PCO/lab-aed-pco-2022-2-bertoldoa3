@@ -1,4 +1,4 @@
-Exercicio 1 - Lista Duplamente Encadaeada Dinâmica (Codigo com erro)
+Exercicio 1 - Lista Duplamente Encadaeada Dinâmica 
 
 ##########################################################################  MAIN ##################################################################################
 using PosicaoLista;
@@ -171,3 +171,8 @@ namespace ClasseFila
         }
     }
 }
+
+
+Exercicio 2 - Lista Duplamente Encadaeada Estatica
+
+
