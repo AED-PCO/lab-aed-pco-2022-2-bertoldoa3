@@ -176,3 +176,4 @@ namespace ClasseFila
 Exercicio 2 - Lista Duplamente Encadaeada Estatica
 
 
+Exercicio 3 - Lista Circular    
